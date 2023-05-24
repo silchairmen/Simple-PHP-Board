@@ -7,11 +7,17 @@ if ($mysqli->connect_errno) {
 
 // 폼 제출이 발생했을 때 실행
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
     // 입력값 받기
-    $title = str_replace("script", "nohack", $title);
-    $content = str_replace("script", "nohack", $content);
-    $title = str_replace("img", "nohack", $title);
-    $content = str_replace("img", "nohack", $content);
+    //author은 고정값이라 개발자가 그냥 넘어간다고 가정
+    //vlun point
+    $author = $_POST['author']
+
+    $title = str_replace("script", "nohack", $_POST['title']);
+    $content = str_replace("script", "nohack", $_POST['content']);
+    $title = str_replace("img", "nohack", $_POST['title']);
+    $content = str_replace("img", "nohack", $_POST['content']);
 
     
 
@@ -46,7 +52,7 @@ $mysqli->close();
     <br><br>
     <h1 class="text-center mb-4">새 글 쓰기</h1>
 
-    <form method="POST">
+    <form method="POST" action="/index.php?&page=board&model=write">
         <div class="form-group">
             <label for="title">제목</label>
             <input type="text" class="form-control" id="title" name="title">
