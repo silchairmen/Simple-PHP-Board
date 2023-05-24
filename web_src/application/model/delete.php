@@ -1,4 +1,6 @@
 <?php
+
+//vlun point 삭제시 검증이 없음.
 // 필요한 파일을 포함합니다.
 include "../application/core/db_connect.php";
 
