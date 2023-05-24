@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS ots;
+USE ots;
+
+CREATE TABLE IF NOT EXISTS user_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(30) NOT NULL,
+    upw VARCHAR(50) NOT NULL,
+    phone_num VARCHAR(13) NOT NULL,
+    grade VARCHAR(5) NOT NULL,
+    nickname VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS free_board (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    content TEXT NOT NULL,
+    views INT NOT NULL DEFAULT 0, -- 조회수 필드 추가
+    nickname VARCHAR(30) NOT NULL,
+    created_at DATETIME DEFAULT NOW(),
+    updated_at DATETIME DEFAULT NOW()
+);
