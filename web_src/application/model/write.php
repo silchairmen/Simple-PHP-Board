@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 입력값 받기
     //author은 고정값이라 개발자가 그냥 넘어간다고 가정
     //vlun point
-    $author = $_POST['author']
-
+    $author = $_POST['author'];
+    
     $title = str_replace("script", "nohack", $_POST['title']);
     $content = str_replace("script", "nohack", $_POST['content']);
     $title = str_replace("img", "nohack", $_POST['title']);
