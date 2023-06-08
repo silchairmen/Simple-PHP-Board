@@ -18,8 +18,8 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_DATABASE: practice
-      MYSQL_USER: test
+      MYSQL_DATABASE: soti
+      MYSQL_USER: root
       MYSQL_PASSWORD: test
       MYSQL_ROOT_PASSWORD: test
     volumes:
