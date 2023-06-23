@@ -19,7 +19,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: soti
-      MYSQL_USER: root
+      MYSQL_USER: soti
       MYSQL_PASSWORD: test
       MYSQL_ROOT_PASSWORD: test
     volumes:
