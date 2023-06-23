@@ -1,6 +1,6 @@
 <?php
 $host = 'db';
-$user = 'otsadmin';
-$pass = 'otstoor';
-$mysqli = new mysqli($host, $user, $pass, 'ots');
+$user = 'soti';
+$pass = 'test';
+$mysqli = new mysqli($host, $user, $pass, 'soti');
 ?>
