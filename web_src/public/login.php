@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if (empty($uid_err) && empty($upw_err)) {
 		// Prepare a select statement
-		$stmt = $mysqli->prepare("SELECT nickname FROM user_info WHERE user_id=? AND upw=?");
+		$stmt = $mysqli->prepare("SELECT * FROM user_info WHERE user_id=? AND upw=?");
 	
 		$stmt->bind_param("ss", $uid, $upw);
 	
@@ -35,11 +35,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		// Check if username exists
 		if ($stmt->num_rows == 1) {
 			// Bind result variables
-			$stmt->bind_result($nickname);
+			$stmt->bind_result($id, $user_id, $upw, $phone_num, $grade, $nickname);
 			if ($stmt->fetch()) {
 				// Store data in session variables
-				$_SESSION["user_name"] = $uid;
-				$_SESSION["nickname"] = $nickname;
+				$_SESSION["id"] = $id;
+				$_SESSION["user_id"] = $user_id;
+                $_SESSION["phone_num"] = $phone_num;
+                $_SESSION["grade"] = $grade;
+                $_SESSION["nickname"] = $nickname;
+
 	
 				// Redirect user to home page
 				header("location: ../index.php");
