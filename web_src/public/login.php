@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		// Check if username exists
 		if ($stmt->num_rows == 1) {
 			// Bind result variables
-			$stmt->bind_result($id, $user_id, $upw, $phone_num, $grade, $nickname);
+			$stmt->bind_result($id, $user_id, $upw, $phone_num, $grade, $nickname, $img_name);
 			if ($stmt->fetch()) {
 				// Store data in session variables
 				$_SESSION["id"] = $id;
@@ -43,6 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION["phone_num"] = $phone_num;
                 $_SESSION["grade"] = $grade;
                 $_SESSION["nickname"] = $nickname;
+                $_SESSION["img_name"] = $img_name;
 
 	
 				// Redirect user to home page

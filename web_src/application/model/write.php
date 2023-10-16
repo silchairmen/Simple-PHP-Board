@@ -13,11 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //author은 고정값이라 개발자가 그냥 넘어간다고 가정
     //vlun point
     $author = $_POST['author'];
-    
-    $title = str_replace("script", "nohack", $_POST['title']);
-    $content = str_replace("script", "nohack", $_POST['content']);
-    $title = str_replace("img", "nohack", $_POST['title']);
-    $content = str_replace("img", "nohack", $_POST['content']);
+    $title = $_POST['title'];
+    $content = $_POST['content'];
 
     
 

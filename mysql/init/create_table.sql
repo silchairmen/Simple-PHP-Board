@@ -7,8 +7,9 @@ CREATE TABLE IF NOT EXISTS user_info (
     upw VARCHAR(50) NOT NULL,
     phone_num VARCHAR(13) NOT NULL,
     grade VARCHAR(5) NOT NULL,
-    nickname VARCHAR(20) NOT NULL
-);
+    nickname VARCHAR(20) NOT NULL,
+    img_name VARCHAR(128)
+)ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS free_board (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -18,4 +19,4 @@ CREATE TABLE IF NOT EXISTS free_board (
     nickname VARCHAR(30) NOT NULL,
     created_at DATETIME DEFAULT NOW(),
     updated_at DATETIME DEFAULT NOW()
-);
+)ENGINE=InnoDB;
