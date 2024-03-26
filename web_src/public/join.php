@@ -125,10 +125,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div class="form-group">
 					<label for="grade">학년</label>
 					<select class="form-control" id="grade" name="grade">
-						<option value="1학년">1학년</option>
-						<option value="2학년">2학년</option>
-						<option value="3학년">3학년</option>
-						<option value="4학년">4학년</option>
+						<option value="1th">1학년</option>
+						<option value="2th">2학년</option>
+						<option value="3th">3학년</option>
+						<option value="4th">4학년</option>
 					</select>
 				</div>
 				<button type="submit" class="btn btn-primary btn-block">가입하기</button>

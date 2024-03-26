@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="/introduce.php?username=test">intruduce</a>
+                  <a class="nav-link" value="<?php echo $_SESSION['nickname']; ?>" id="nickname" href="/introduce.php?username=<?php echo $_SESSION['nickname']; ?>">intruduce</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="index.php?page=board">Board</a>

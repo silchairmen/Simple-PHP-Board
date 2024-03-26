@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #000;
+    margin: 0;
+    overflow: hidden;
+  }
+  .binary {
+    position: absolute;
+    color: #0F0; /* 녹색 */
+    font-size: 24px;
+    opacity: 0;
+  }
+  .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red; /* 녹색 */
+    font-size: 80px;
+  }
+</style>
+</head>
+<body>
+<div class="center-text">YoU H@CKKED:D</div>
+<script>
+  function createBinary() {
+    const binary = document.createElement('div');
+    binary.className = 'binary';
+    binary.textContent = (Math.random() > 0.5) ? '1' : '0';
+    binary.style.top = Math.random() * 100 + 'vh';
+    binary.style.left = Math.random() * 100 + 'vw';
+    binary.style.animation = 'fade 2s linear';
+    document.body.appendChild(binary);
+  }
+
+  // 이벤트 루프를 통해 이진 숫자 계속 생성
+  setInterval(createBinary, 200);
+
+  // 이진 숫자를 무작위로 나타나게 하는 애니메이션
+  let styleSheet = document.styleSheets[0];
+  styleSheet.insertRule(`@keyframes fade {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-100vh); }
+  }`, 0);
+</script>
+</body>
+</html>
